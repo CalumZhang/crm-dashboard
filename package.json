@@ -1,0 +1,20 @@
+{
+  "name": "crm-dashboard",
+  "version": "1.0.0",
+  "description": "CRM lead management dashboard for BabyMilu Discord community",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "discord.js": "^14.16.3",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0",
+    "express-session": "^1.18.0",
+    "firebase-admin": "^12.6.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

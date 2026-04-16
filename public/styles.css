@@ -1,0 +1,89 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #f5f5f5; color: #1a1a1a; }
+
+/* Login */
+.login-container { display: flex; justify-content: center; align-items: center; min-height: 100vh; }
+.login-box { background: #fff; padding: 2rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); width: 320px; }
+.login-box h2 { margin-bottom: 1rem; font-size: 1.25rem; }
+.login-box input { width: 100%; padding: 0.5rem; border: 1px solid #ddd; border-radius: 4px; margin-bottom: 0.75rem; font-size: 0.9rem; }
+.login-box button { width: 100%; padding: 0.5rem; background: #5865f2; color: #fff; border: none; border-radius: 4px; cursor: pointer; font-size: 0.9rem; }
+.login-box button:hover { background: #4752c4; }
+.login-error { color: #e74c3c; font-size: 0.85rem; margin-bottom: 0.5rem; display: none; }
+
+/* Header */
+.header { background: #fff; border-bottom: 1px solid #e0e0e0; padding: 0.75rem 1.5rem; display: flex; justify-content: space-between; align-items: center; }
+.header h1 { font-size: 1.1rem; font-weight: 600; }
+.header button { background: none; border: 1px solid #ddd; padding: 0.35rem 0.75rem; border-radius: 4px; cursor: pointer; font-size: 0.8rem; }
+
+/* Toolbar */
+.toolbar { padding: 0.75rem 1.5rem; display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap; background: #fff; border-bottom: 1px solid #e0e0e0; }
+.toolbar input[type="text"] { padding: 0.4rem 0.75rem; border: 1px solid #ddd; border-radius: 4px; font-size: 0.85rem; width: 250px; }
+.toolbar select { padding: 0.4rem 0.5rem; border: 1px solid #ddd; border-radius: 4px; font-size: 0.85rem; }
+.bulk-actions { margin-left: auto; display: flex; gap: 0.5rem; align-items: center; }
+.bulk-actions span { font-size: 0.8rem; color: #666; }
+.bulk-actions button { padding: 0.35rem 0.75rem; border: 1px solid #ddd; border-radius: 4px; cursor: pointer; font-size: 0.8rem; background: #fff; }
+.bulk-actions button:hover { background: #f0f0f0; }
+
+/* Table */
+.table-container { padding: 0 1.5rem 1.5rem; overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.08); margin-top: 0.75rem; }
+thead th { background: #fafafa; padding: 0.6rem 0.75rem; text-align: left; font-size: 0.8rem; font-weight: 600; color: #555; border-bottom: 1px solid #e0e0e0; cursor: pointer; white-space: nowrap; user-select: none; }
+thead th:hover { background: #f0f0f0; }
+thead th .sort-arrow { margin-left: 4px; font-size: 0.7rem; }
+tbody td { padding: 0.5rem 0.75rem; font-size: 0.85rem; border-bottom: 1px solid #f0f0f0; vertical-align: top; }
+tbody tr:hover { background: #fafbff; }
+tbody tr.expanded { background: #f0f2ff; }
+
+/* Checkbox column */
+.col-check { width: 32px; }
+.col-check input { cursor: pointer; }
+
+/* State badges */
+.state-badge { display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 0.75rem; font-weight: 500; white-space: nowrap; }
+.state-new { background: #e3f2fd; color: #1565c0; }
+.state-contacted { background: #fff3e0; color: #e65100; }
+.state-responded { background: #e8f5e9; color: #2e7d32; }
+.state-intent_to_buy { background: #fce4ec; color: #c62828; }
+.state-purchased { background: #e0f2f1; color: #00695c; }
+.state-dropped { background: #f5f5f5; color: #9e9e9e; }
+
+/* State dropdown in table */
+.state-select { padding: 2px 4px; border: 1px solid #ddd; border-radius: 4px; font-size: 0.8rem; background: #fff; cursor: pointer; }
+
+/* Expandable detail */
+.detail-row td { padding: 0; }
+.detail-panel { padding: 1rem 1.5rem; background: #fafbff; border-top: 1px solid #e0e0e0; }
+.detail-panel h3 { font-size: 0.9rem; margin-bottom: 0.5rem; color: #333; }
+.detail-section { margin-bottom: 1rem; }
+.detail-section h4 { font-size: 0.8rem; font-weight: 600; color: #666; margin-bottom: 0.35rem; text-transform: uppercase; letter-spacing: 0.5px; }
+.detail-meta { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0.5rem; margin-bottom: 1rem; }
+.detail-meta .meta-item { font-size: 0.8rem; }
+.detail-meta .meta-label { color: #888; }
+.detail-meta .meta-value { font-weight: 500; }
+.intro-content { background: #fff; padding: 0.75rem; border-radius: 4px; border: 1px solid #e0e0e0; font-size: 0.85rem; white-space: pre-wrap; max-height: 200px; overflow-y: auto; }
+.qualifying-messages { list-style: none; }
+.qualifying-messages li { background: #fff; padding: 0.5rem 0.75rem; border: 1px solid #e0e0e0; border-radius: 4px; margin-bottom: 0.35rem; font-size: 0.8rem; }
+.qualifying-messages .msg-meta { color: #888; font-size: 0.75rem; margin-top: 0.25rem; }
+.qualifying-messages a { color: #5865f2; text-decoration: none; }
+
+/* Discord messages */
+.discord-messages { max-height: 400px; overflow-y: auto; }
+.discord-msg { background: #fff; padding: 0.5rem 0.75rem; border: 1px solid #e0e0e0; border-radius: 4px; margin-bottom: 0.35rem; font-size: 0.8rem; }
+.discord-msg .msg-time { color: #888; font-size: 0.75rem; }
+.discord-msg a { color: #5865f2; text-decoration: none; }
+.loading { color: #888; font-style: italic; font-size: 0.8rem; }
+
+/* Notes */
+.notes-list { list-style: none; margin-bottom: 0.5rem; }
+.notes-list li { background: #fff; padding: 0.5rem 0.75rem; border: 1px solid #e0e0e0; border-radius: 4px; margin-bottom: 0.35rem; font-size: 0.8rem; }
+.notes-list .note-time { color: #888; font-size: 0.75rem; }
+.note-form { display: flex; gap: 0.5rem; }
+.note-form input { flex: 1; padding: 0.4rem 0.75rem; border: 1px solid #ddd; border-radius: 4px; font-size: 0.85rem; }
+.note-form button { padding: 0.4rem 0.75rem; background: #5865f2; color: #fff; border: none; border-radius: 4px; cursor: pointer; font-size: 0.85rem; }
+
+/* Stats bar */
+.stats-bar { padding: 0.5rem 1.5rem; display: flex; gap: 1.5rem; font-size: 0.8rem; color: #666; background: #fff; border-bottom: 1px solid #e0e0e0; }
+.stats-bar .stat-count { font-weight: 600; color: #333; }
+
+/* Hidden */
+.hidden { display: none !important; }
